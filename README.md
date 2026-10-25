@@ -218,7 +218,7 @@ a:hover{opacity:.65}
               <span class="narrativas-gallery-count" id="narrativas-count">1 / 5</span>
             </div>
           </div>
-          <div class="project-info"><div><h3><a class="project-title-link" href="narrativas-futuras.html" aria-label="Ver página del proyecto Narrativas Futuras">Narrativas Futuras</a></h3><p>Proyecto audiovisual</p></div><span class="project-year">2025</span></div>
+          <div class="project-info"><div><h3><a class="project-title-link" href="https://matafamerv-web.github.io/Matafame_NarrativasFuturas/" target="_blank" rel="noopener noreferrer" aria-label="Ver página del proyecto Narrativas Futuras">Narrativas Futuras</a></h3><p>Proyecto audiovisual</p></div><span class="project-year">2025</span></div>
         </article>
         <article class="project-card"><div class="video-frame"><iframe src="https://www.youtube.com/embed/VIDEO_FURADA" title="Furada" loading="lazy" allowfullscreen></iframe></div><div class="project-info"><div><h3><a class="project-title-link" href="furada.html" aria-label="Ver página del proyecto Furada">Furada</a></h3><p>Proyecto audiovisual</p></div><span class="project-year">2023</span></div></article>
         <article class="project-card"><div class="video-frame"><iframe src="https://www.youtube.com/embed/VIDEO_ADIOS_MANUEL" title="Adiós Manuel" loading="lazy" allowfullscreen></iframe></div><div class="project-info"><div><h3><a class="project-title-link" href="adios-manuel.html" aria-label="Ver página del proyecto Adiós Manuel">Adiós Manuel</a></h3><p>Proyecto audiovisual</p></div><span class="project-year">2022</span></div></article>
