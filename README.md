@@ -200,8 +200,7 @@ a:hover{opacity:.65}
             <div class="narrativas-gallery-caption"><span>Narrativas Futuras</span><span>Fotografías · Vídeo · 2025</span></div>
             <div class="narrativas-gallery" id="narrativas-gallery" aria-label="Galería y vídeo de Narrativas Futuras">
               <!-- Para añadir fotos, duplica una slide de foto y cambia la ruta FOTO_NARRATIVAS_XX.jpg. -->
-              <figure class="narrativas-slide narrativas-photo-slide"><img src="[FOTO_NARRATIVAS_01.jpg](https://raw.githubusercontent.com/matafamerv-web/Matafame/a42f68850b31399931af7a5c7023186f58e8fd10/Matafame%3DYoutube.png"
-       alt="Narrativas Futuras — fotografía 1)" alt="Narrativas Futuras — fotografía 1" loading="lazy" data-lightbox></figure>
+              <figure class="narrativas-slide narrativas-photo-slide"><img src="https://raw.githubusercontent.com/matafamerv-web/Matafame/a42f68850b31399931af7a5c7023186f58e8fd10/Matafame%3DYoutube.png" alt="Narrativas Futuras — fotografía 1" loading="lazy" data-lightbox></figure>
               <figure class="narrativas-slide narrativas-photo-slide"><img src="FOTO_NARRATIVAS_02.jpg" alt="Narrativas Futuras — fotografía 2" loading="lazy" data-lightbox></figure>
               <figure class="narrativas-slide narrativas-photo-slide"><img src="FOTO_NARRATIVAS_03.jpg" alt="Narrativas Futuras — fotografía 3" loading="lazy" data-lightbox></figure>
               <figure class="narrativas-slide narrativas-photo-slide"><img src="FOTO_NARRATIVAS_04.jpg" alt="Narrativas Futuras — fotografía 4" loading="lazy" data-lightbox></figure>
