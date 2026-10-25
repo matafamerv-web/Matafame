@@ -135,7 +135,7 @@ a:hover{opacity:.65}
 <body>
 <header class="site-header">
   <div class="container nav">
-    <a class="logo" href="#inicio">MATAFAME®</a>
+    <a class="logo" href="#inicio">&nbsp;</a>
     <nav class="nav-links" aria-label="Navegación principal">
       <a href="#audiovisual">Audiovisual</a><a href="#bandas">Bandas</a><a href="#musica">Música</a><a href="#bio">Bio</a><a href="#contacto">Contacto</a>
     </nav>
@@ -145,8 +145,7 @@ a:hover{opacity:.65}
   <section class="hero container" id="inicio">
     <div class="hero-content">
       <p class="eyebrow">Portfolio · Audiovisual · Música</p>
-      <h1>MATA
-      &nbsp; &nbsp;FAME</h1>
+      <h1>MATA&nbsp; FAME</h1>
       <div class="hero-bottom">
         <p class="hero-description">Práctica artística y producción audiovisual desde una perspectiva multidisciplinar.</p>
         <div class="hero-note"><div>Galicia, España</div><div>Dirección · Imagen · Sonido</div></div>
@@ -166,7 +165,7 @@ a:hover{opacity:.65}
     <div class="container">
       <div class="section-heading"><h2>Audiovisual</h2><p>Archivo de obras, piezas y proyectos desarrollados en distintos contextos.</p></div>
       <div class="project-grid">
-        <article class="project-card"><div class="video-frame"><iframe src="https://www.youtube.com/embed/VIDEO_LOBES" title="Lobes Salvaxes" loading="lazy" allowfullscreen></iframe></div><div class="project-info"><div><h3>Lobes Salvaxes</h3><p>Proyecto audiovisual</p></div><span class="project-year">2025</span></div></article>
+        <article class="project-card"><div class="video-frame"><iframe src="https://www.instagram.com/reel/DRB5tjwEcmF/?utm_source=ig_web_copy_link&srtk=MWQ1ZGUxMzBkMA==" title="Lobes Salvaxes" loading="lazy" allowfullscreen></iframe></div><div class="project-info"><div><h3>Lobes Salvaxes</h3><p>Proyecto audiovisual</p></div><span class="project-year">2025</span></div></article>
         <article class="project-card"><div class="video-frame"><iframe src="https://www.youtube.com/embed/VIDEO_NARRATIVAS" title="Narrativas Futuras" loading="lazy" allowfullscreen></iframe></div><div class="project-info"><div><h3>Narrativas Futuras</h3><p>Proyecto audiovisual</p></div><span class="project-year">2025</span></div></article>
         <article class="project-card"><div class="video-frame"><iframe src="https://www.youtube.com/embed/VIDEO_FURADA" title="Furada" loading="lazy" allowfullscreen></iframe></div><div class="project-info"><div><h3>Furada</h3><p>Proyecto audiovisual</p></div><span class="project-year">2023</span></div></article>
         <article class="project-card"><div class="video-frame"><iframe src="https://www.youtube.com/embed/VIDEO_ADIOS_MANUEL" title="Adiós Manuel" loading="lazy" allowfullscreen></iframe></div><div class="project-info"><div><h3>Adiós Manuel</h3><p>Proyecto audiovisual</p></div><span class="project-year">2022</span></div></article>
@@ -308,4 +307,3 @@ for (let album = 1; album <= 5; album++) {
 </script>
 </body>
 </html>
-
