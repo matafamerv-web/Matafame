@@ -38,6 +38,35 @@ a:hover{opacity:.65}
 .video-caption{display:flex;justify-content:space-between;gap:20px;padding-top:14px;font-size:13px}
 .video-caption span:last-child{color:var(--muted);text-align:right}
 .project-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:42px 24px}
+
+/* Carrusel unificado de Narrativas Futuras — integrado con el sistema visual */
+.narrativas-gallery-wrap{position:relative;margin-bottom:0}
+.narrativas-gallery{display:grid;grid-auto-flow:column;grid-auto-columns:100%;gap:0;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;scrollbar-width:none;padding:0;border:1px solid var(--line);background:#deded7}
+.narrativas-gallery::-webkit-scrollbar{display:none}
+.narrativas-slide{margin:0;min-width:0;overflow:hidden;background:#deded7;aspect-ratio:16/9;scroll-snap-align:start;position:relative}
+.narrativas-photo-slide img{width:100%;height:100%;object-fit:cover;cursor:zoom-in;transition:transform .3s ease}
+.narrativas-photo-slide img:hover{transform:scale(1.015)}
+.narrativas-video-slide .video-frame{width:100%;height:100%;aspect-ratio:auto;background:#deded7}
+.narrativas-video-slide .video-frame iframe{width:100%;height:100%;border:0}
+.narrativas-gallery-caption{display:none;justify-content:space-between;align-items:baseline;gap:12px;margin:0 0 10px;color:var(--muted);font-size:11px}
+.narrativas-gallery-caption span:first-child{color:var(--foreground);font-weight:600}
+.narrativas-gallery-controls{display:flex;align-items:center;gap:12px;margin-top:12px;padding-bottom:2px}
+.narrativas-gallery-controls button{display:grid;place-items:center;flex:0 0 32px;width:32px;height:32px;border:1px solid var(--line);border-radius:50%;background:transparent;color:var(--foreground);font-size:16px;line-height:1;cursor:pointer;transition:background .2s ease,border-color .2s ease}
+.narrativas-gallery-controls button:hover{background:var(--accent);border-color:var(--foreground)}
+.narrativas-gallery-controls input{flex:1;min-width:0;accent-color:var(--foreground);cursor:pointer}
+.narrativas-gallery-count{min-width:34px;text-align:right;font-size:10px;color:var(--muted);white-space:nowrap}
+.narrativas-gallery-wrap + .project-info{padding-top:12px}
+.photo-lightbox{position:fixed;inset:0;z-index:100;display:none;align-items:center;justify-content:center;padding:24px;background:rgba(0,0,0,.9)}
+.photo-lightbox.is-open{display:flex}
+.photo-lightbox img{max-width:min(1100px,100%);max-height:85vh;object-fit:contain}
+.photo-lightbox button{position:absolute;top:18px;right:22px;border:1px solid rgba(255,255,255,.6);border-radius:50%;width:42px;height:42px;background:transparent;color:white;font-size:25px;cursor:pointer}
+@media(max-width:700px){
+  .narrativas-gallery-caption{margin-bottom:8px}
+  .narrativas-gallery-controls{gap:8px;margin-top:9px}
+  .narrativas-gallery-controls button{flex-basis:30px;width:30px;height:30px}
+  .narrativas-gallery-count{min-width:30px;font-size:9px}
+}
+
 .project-card{min-width:0}
 .project-info{display:flex;justify-content:space-between;align-items:start;gap:16px;padding-top:12px}
 .project-info h3{margin:0;font-size:clamp(17px,2vw,24px);font-weight:500;letter-spacing:-.035em}
@@ -166,7 +195,28 @@ a:hover{opacity:.65}
       <div class="section-heading"><h2>Audiovisual</h2><p>Archivo de obras, piezas y proyectos desarrollados en distintos contextos.</p></div>
       <div class="project-grid">
         <article class="project-card"><div class="video-frame"><iframe src="https://www.youtube.com/embed/3QeXXPd2_Zs?si=nd-8XJZstZra4yXF" title="Lobes Salvaxes" loading="lazy" allowfullscreen></iframe></div><div class="project-info"><div><h3>Lobes Salvaxes</h3><p>Proyecto audiovisual</p></div><span class="project-year">2025</span></div></article>
-        <article class="project-card"><div class="video-frame"><iframe src="https://www.youtube.com/embed/VIDEO_NARRATIVAS" title="Narrativas Futuras" loading="lazy" allowfullscreen></iframe></div><div class="project-info"><div><h3>Narrativas Futuras</h3><p>Proyecto audiovisual</p></div><span class="project-year">2025</span></div></article>
+        <article class="project-card">
+          <div class="narrativas-gallery-wrap">
+            <div class="narrativas-gallery-caption"><span>Narrativas Futuras</span><span>Fotografías · Vídeo · 2025</span></div>
+            <div class="narrativas-gallery" id="narrativas-gallery" aria-label="Galería y vídeo de Narrativas Futuras">
+              <!-- Para añadir fotos, duplica una slide de foto y cambia la ruta FOTO_NARRATIVAS_XX.jpg. -->
+              <figure class="narrativas-slide narrativas-photo-slide"><img src="https://github.com/matafamerv-web/Matafame/blob/84b2e35d4ef7948d8e583cc3adda934ebf23cca2/Matafame%3DYoutube.png" alt="Narrativas Futuras — fotografía 1" loading="lazy" data-lightbox></figure>
+              <figure class="narrativas-slide narrativas-photo-slide"><img src="FOTO_NARRATIVAS_02.jpg" alt="Narrativas Futuras — fotografía 2" loading="lazy" data-lightbox></figure>
+              <figure class="narrativas-slide narrativas-photo-slide"><img src="FOTO_NARRATIVAS_03.jpg" alt="Narrativas Futuras — fotografía 3" loading="lazy" data-lightbox></figure>
+              <figure class="narrativas-slide narrativas-photo-slide"><img src="FOTO_NARRATIVAS_04.jpg" alt="Narrativas Futuras — fotografía 4" loading="lazy" data-lightbox></figure>
+              <div class="narrativas-slide narrativas-video-slide">
+                <div class="video-frame"><iframe src="https://www.youtube.com/embed/VIDEO_NARRATIVAS" title="Narrativas Futuras" loading="lazy" allowfullscreen></iframe></div>
+              </div>
+            </div>
+            <div class="narrativas-gallery-controls">
+              <button type="button" id="narrativas-prev" aria-label="Elemento anterior">←</button>
+              <input type="range" id="narrativas-slider" min="0" max="4" value="0" step="1" aria-label="Desplazarse por fotos y vídeo de Narrativas Futuras">
+              <button type="button" id="narrativas-next" aria-label="Elemento siguiente">→</button>
+              <span class="narrativas-gallery-count" id="narrativas-count">1 / 5</span>
+            </div>
+          </div>
+          <div class="project-info"><div><h3>Narrativas Futuras</h3><p>Proyecto audiovisual</p></div><span class="project-year">2025</span></div>
+        </article>
         <article class="project-card"><div class="video-frame"><iframe src="https://www.youtube.com/embed/VIDEO_FURADA" title="Furada" loading="lazy" allowfullscreen></iframe></div><div class="project-info"><div><h3>Furada</h3><p>Proyecto audiovisual</p></div><span class="project-year">2023</span></div></article>
         <article class="project-card"><div class="video-frame"><iframe src="https://www.youtube.com/embed/VIDEO_ADIOS_MANUEL" title="Adiós Manuel" loading="lazy" allowfullscreen></iframe></div><div class="project-info"><div><h3>Adiós Manuel</h3><p>Proyecto audiovisual</p></div><span class="project-year">2022</span></div></article>
         <article class="project-card"><div class="video-frame"><iframe src="https://www.youtube.com/embed/VIDEO_MATAFAME" title="Matafame" loading="lazy" allowfullscreen></iframe></div><div class="project-info"><div><h3>Matafame</h3><p>Proyecto audiovisual</p></div><span class="project-year">2021</span></div></article>
@@ -233,10 +283,65 @@ a:hover{opacity:.65}
     </div>
   </section>
 </main>
+<div class="photo-lightbox" id="photo-lightbox" role="dialog" aria-modal="true" aria-label="Fotografía ampliada">
+  <button type="button" id="close-lightbox" aria-label="Cerrar fotografía">×</button>
+  <img id="lightbox-image" src="" alt="">
+</div>
 <footer class="site-footer"><div class="container footer-inner"><p>© <span id="year"></span> Matafame</p><p>Portfolio audiovisual y musical</p></div></footer>
 
 <script>
 document.getElementById("year").textContent = new Date().getFullYear();
+
+const narrativasGallery = document.getElementById("narrativas-gallery");
+const narrativasSlider = document.getElementById("narrativas-slider");
+const narrativasCount = document.getElementById("narrativas-count");
+const narrativasSlides = narrativasGallery ? Array.from(narrativasGallery.querySelectorAll(".narrativas-slide")) : [];
+function narrativasScrollTo(index) {
+  if (!narrativasGallery || !narrativasSlides.length) return;
+  const safeIndex = Math.max(0, Math.min(index, narrativasSlides.length - 1));
+  narrativasGallery.scrollTo({
+    left: narrativasSlides[safeIndex].offsetLeft - narrativasSlides[0].offsetLeft,
+    behavior: "smooth"
+  });
+  if (narrativasSlider) narrativasSlider.value = String(safeIndex);
+  if (narrativasCount) narrativasCount.textContent = `${safeIndex + 1} / ${narrativasSlides.length}`;
+}
+if (narrativasSlider) {
+  narrativasSlider.max = String(Math.max(0, narrativasSlides.length - 1));
+  narrativasSlider.addEventListener("input", event => narrativasScrollTo(Number(event.target.value)));
+}
+document.getElementById("narrativas-prev").addEventListener("click", () => narrativasScrollTo(Number(narrativasSlider.value) - 1));
+document.getElementById("narrativas-next").addEventListener("click", () => narrativasScrollTo(Number(narrativasSlider.value) + 1));
+if (narrativasGallery) {
+  narrativasGallery.addEventListener("scroll", () => {
+    const nearest = narrativasSlides.reduce((best, slide, index) => {
+      const distance = Math.abs((slide.offsetLeft - narrativasSlides[0].offsetLeft) - narrativasGallery.scrollLeft);
+      return distance < best.distance ? {index, distance} : best;
+    }, {index: 0, distance: Infinity});
+    if (narrativasSlider) narrativasSlider.value = String(nearest.index);
+    if (narrativasCount) narrativasCount.textContent = `${nearest.index + 1} / ${narrativasSlides.length}`;
+  });
+}
+document.querySelectorAll("[data-lightbox]").forEach(photo => {
+  photo.addEventListener("click", () => {
+    const lightbox = document.getElementById("photo-lightbox");
+    const largePhoto = document.getElementById("lightbox-image");
+    largePhoto.src = photo.src;
+    largePhoto.alt = photo.alt;
+    lightbox.classList.add("is-open");
+  });
+});
+function closePhotoLightbox() {
+  document.getElementById("photo-lightbox").classList.remove("is-open");
+}
+document.getElementById("close-lightbox").addEventListener("click", closePhotoLightbox);
+document.getElementById("photo-lightbox").addEventListener("click", event => {
+  if (event.target.id === "photo-lightbox") closePhotoLightbox();
+});
+document.addEventListener("keydown", event => {
+  if (event.key === "Escape") closePhotoLightbox();
+});
+
 
 /* Genera 5 carpetas compactas, cada una con 10 pistas.
    Sustituye los nombres y las rutas de audio de ejemplo por los tuyos. */
