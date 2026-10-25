@@ -802,6 +802,7 @@ a:hover { opacity: .65; }
           <div>
             <h3><a href="furada.html">Furada ↗</a></h3>
             <p>Proyecto audiovisual</p>
+
           </div>
           <span class="project-year">2023</span>
         </div>
