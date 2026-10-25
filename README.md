@@ -44,7 +44,7 @@ a:hover{opacity:.65}
 .narrativas-gallery{display:grid;grid-auto-flow:column;grid-auto-columns:100%;gap:0;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;scrollbar-width:none;padding:0;border:1px solid var(--line);background:#deded7}
 .narrativas-gallery::-webkit-scrollbar{display:none}
 .narrativas-slide{margin:0;min-width:0;overflow:hidden;background:#deded7;aspect-ratio:16/9;scroll-snap-align:start;position:relative}
-.narrativas-photo-slide img{width:100%;height:100%;object-fit:contain;object-position:center;cursor:zoom-in;transition:transform .3s ease}
+.narrativas-photo-slide img{width:100%;height:100%;object-fit:cover;cursor:zoom-in;transition:transform .3s ease}
 .narrativas-photo-slide img:hover{transform:scale(1.015)}
 .narrativas-video-slide .video-frame{width:100%;height:100%;aspect-ratio:auto;background:#deded7}
 .narrativas-video-slide .video-frame iframe{width:100%;height:100%;border:0}
@@ -70,6 +70,8 @@ a:hover{opacity:.65}
 .project-card{min-width:0}
 .project-info{display:flex;justify-content:space-between;align-items:start;gap:16px;padding-top:12px}
 .project-info h3{margin:0;font-size:clamp(17px,2vw,24px);font-weight:500;letter-spacing:-.035em}
+.project-title-link{color:inherit;text-decoration:none;transition:opacity .2s ease}
+.project-title-link:hover{opacity:.65}
 .project-info p{margin:4px 0 0;color:var(--muted);font-size:12px}
 .project-year{flex-shrink:0;color:var(--muted);font-size:12px}
 .music-subsection+.music-subsection{margin-top:64px}
@@ -195,7 +197,7 @@ a:hover{opacity:.65}
       <div class="section-heading"><h2>Arte e Audiovisual&nbsp;</h2>
       <p>Archivo de obras, piezas y proyectos desarrollados en distintos contextos.</p></div>
       <div class="project-grid">
-        <article class="project-card"><div class="video-frame"><iframe src="https://www.youtube.com/embed/3QeXXPd2_Zs?si=nd-8XJZstZra4yXF" title="Lobes Salvaxes" loading="lazy" allowfullscreen></iframe></div><div class="project-info"><div><h3>Lobes Salvaxes</h3><p>Proyecto audiovisual</p></div><span class="project-year">2025</span></div></article>
+        <article class="project-card"><div class="video-frame"><iframe src="https://www.youtube.com/embed/3QeXXPd2_Zs?si=nd-8XJZstZra4yXF" title="Lobes Salvaxes" loading="lazy" allowfullscreen></iframe></div><div class="project-info"><div><h3><a class="project-title-link" href="lobes-salvaxes.html" aria-label="Ver página del proyecto Lobes Salvaxes">Lobes Salvaxes</a></h3><p>Proyecto audiovisual</p></div><span class="project-year">2025</span></div></article>
         <article class="project-card">
           <div class="narrativas-gallery-wrap">
             <div class="narrativas-gallery-caption"><span>Narrativas Futuras</span><span>Fotografías · Vídeo · 2025</span></div>
@@ -216,12 +218,12 @@ a:hover{opacity:.65}
               <span class="narrativas-gallery-count" id="narrativas-count">1 / 5</span>
             </div>
           </div>
-          <div class="project-info"><div><h3>Narrativas Futuras</h3><p>Proyecto audiovisual</p></div><span class="project-year">2025</span></div>
+          <div class="project-info"><div><h3><a class="project-title-link" href="narrativas-futuras.html" aria-label="Ver página del proyecto Narrativas Futuras">Narrativas Futuras</a></h3><p>Proyecto audiovisual</p></div><span class="project-year">2025</span></div>
         </article>
-        <article class="project-card"><div class="video-frame"><iframe src="https://www.youtube.com/embed/VIDEO_FURADA" title="Furada" loading="lazy" allowfullscreen></iframe></div><div class="project-info"><div><h3>Furada</h3><p>Proyecto audiovisual</p></div><span class="project-year">2023</span></div></article>
-        <article class="project-card"><div class="video-frame"><iframe src="https://www.youtube.com/embed/VIDEO_ADIOS_MANUEL" title="Adiós Manuel" loading="lazy" allowfullscreen></iframe></div><div class="project-info"><div><h3>Adiós Manuel</h3><p>Proyecto audiovisual</p></div><span class="project-year">2022</span></div></article>
-        <article class="project-card"><div class="video-frame"><iframe src="https://www.youtube.com/embed/VIDEO_MATAFAME" title="Matafame" loading="lazy" allowfullscreen></iframe></div><div class="project-info"><div><h3>Matafame</h3><p>Proyecto audiovisual</p></div><span class="project-year">2021</span></div></article>
-        <article class="project-card"><div class="video-frame"><iframe src="https://www.youtube.com/embed/VIDEO_FILEBO" title="Filebo" loading="lazy" allowfullscreen></iframe></div><div class="project-info"><div><h3>Filebo</h3><p>Proyecto audiovisual</p></div><span class="project-year">2020</span></div></article>
+        <article class="project-card"><div class="video-frame"><iframe src="https://www.youtube.com/embed/VIDEO_FURADA" title="Furada" loading="lazy" allowfullscreen></iframe></div><div class="project-info"><div><h3><a class="project-title-link" href="furada.html" aria-label="Ver página del proyecto Furada">Furada</a></h3><p>Proyecto audiovisual</p></div><span class="project-year">2023</span></div></article>
+        <article class="project-card"><div class="video-frame"><iframe src="https://www.youtube.com/embed/VIDEO_ADIOS_MANUEL" title="Adiós Manuel" loading="lazy" allowfullscreen></iframe></div><div class="project-info"><div><h3><a class="project-title-link" href="adios-manuel.html" aria-label="Ver página del proyecto Adiós Manuel">Adiós Manuel</a></h3><p>Proyecto audiovisual</p></div><span class="project-year">2022</span></div></article>
+        <article class="project-card"><div class="video-frame"><iframe src="https://www.youtube.com/embed/VIDEO_MATAFAME" title="Matafame" loading="lazy" allowfullscreen></iframe></div><div class="project-info"><div><h3><a class="project-title-link" href="matafame.html" aria-label="Ver página del proyecto Matafame">Matafame</a></h3><p>Proyecto audiovisual</p></div><span class="project-year">2021</span></div></article>
+        <article class="project-card"><div class="video-frame"><iframe src="https://www.youtube.com/embed/VIDEO_FILEBO" title="Filebo" loading="lazy" allowfullscreen></iframe></div><div class="project-info"><div><h3><a class="project-title-link" href="filebo.html" aria-label="Ver página del proyecto Filebo">Filebo</a></h3><p>Proyecto audiovisual</p></div><span class="project-year">2020</span></div></article>
       </div>
     </div>
   </section>
