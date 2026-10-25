@@ -44,7 +44,7 @@ a:hover{opacity:.65}
 .narrativas-gallery{display:grid;grid-auto-flow:column;grid-auto-columns:100%;gap:0;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;scrollbar-width:none;padding:0;border:1px solid var(--line);background:#deded7}
 .narrativas-gallery::-webkit-scrollbar{display:none}
 .narrativas-slide{margin:0;min-width:0;overflow:hidden;background:#deded7;aspect-ratio:16/9;scroll-snap-align:start;position:relative}
-.narrativas-photo-slide img{width:100%;height:100%;object-fit:cover;cursor:zoom-in;transition:transform .3s ease}
+.narrativas-photo-slide img{width:100%;height:100%;object-fit:contain;object-position:center;cursor:zoom-in;transition:transform .3s ease}
 .narrativas-photo-slide img:hover{transform:scale(1.015)}
 .narrativas-video-slide .video-frame{width:100%;height:100%;aspect-ratio:auto;background:#deded7}
 .narrativas-video-slide .video-frame iframe{width:100%;height:100%;border:0}
@@ -166,7 +166,7 @@ a:hover{opacity:.65}
   <div class="container nav">
     <a class="logo" href="#inicio">&nbsp;</a>
     <nav class="nav-links" aria-label="Navegación principal">
-      <a href="#audiovisual">Audiovisual</a><a href="#bandas">Bandas</a><a href="#musica">Música</a><a href="#bio">Bio</a><a href="#contacto">Contacto</a>
+      <a href="#audiovisual">&nbsp; Audiovisual</a><a href="#bandas">Bandas</a><a href="#musica">Música</a><a href="#bio">Bio</a><a href="#contacto">Contacto</a>
     </nav>
   </div>
 </header>
@@ -192,7 +192,8 @@ a:hover{opacity:.65}
 
   <section class="section" id="audiovisual">
     <div class="container">
-      <div class="section-heading"><h2>Audiovisual</h2><p>Archivo de obras, piezas y proyectos desarrollados en distintos contextos.</p></div>
+      <div class="section-heading"><h2>Arte e Audiovisual&nbsp;</h2>
+      <p>Archivo de obras, piezas y proyectos desarrollados en distintos contextos.</p></div>
       <div class="project-grid">
         <article class="project-card"><div class="video-frame"><iframe src="https://www.youtube.com/embed/3QeXXPd2_Zs?si=nd-8XJZstZra4yXF" title="Lobes Salvaxes" loading="lazy" allowfullscreen></iframe></div><div class="project-info"><div><h3>Lobes Salvaxes</h3><p>Proyecto audiovisual</p></div><span class="project-year">2025</span></div></article>
         <article class="project-card">
